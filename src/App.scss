@@ -1,0 +1,71 @@
+.app {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 30%;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+
+  .selected {
+    background-color: #dddddd;
+  }
+}
+
+.right-panel {
+  flex: 1;
+  position: relative;
+
+  .leaflet-container {
+    height: 100vh;
+  }
+
+  .loading,
+  .error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 401;
+  }
+
+  .loading-svg {
+    margin-right: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    color: #e5e7eb;
+    animation: spin 1s linear infinite;
+    fill: blue;
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .error-header {
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #ef4444;
+  }
+
+  .error-text {
+    padding: 0.75rem 1rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-width: 1px;
+    border-color: #f87171;
+    color: #b91c1c;
+    background-color: #fee2e2;
+  }
+}
