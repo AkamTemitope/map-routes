@@ -33,7 +33,7 @@ const Map = () => {
           <Polyline
             key={key + index}
             positions={routesPolyline[key]}
-            weight={5}
+            weight={7}
             color={randomColor()}
           />
         );
